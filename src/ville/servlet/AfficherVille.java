@@ -42,5 +42,12 @@ public class AfficherVille extends HttpServlet {
 		session.setAttribute(ATT_LISTE_VILLES, villes);
 		this.getServletContext().getRequestDispatcher(VUE_FORM).forward(request, response);		
 	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		
+		doGet(request,response);
+	}
 
 }

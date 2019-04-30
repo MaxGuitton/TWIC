@@ -27,6 +27,7 @@
 				            <th>Code Postal</th>
 				            <th>Latitude</th>
 				            <th>Longitude</th>
+				            <th>Action</th>
 			        	</tr>
 			        </thead>
 			        <tbody>
@@ -40,6 +41,12 @@
 					            <td><%=villes.get(i).getCodePostal() %></td>
 					            <td><%=villes.get(i).getLatitude() %></td>
 					            <td><%=villes.get(i).getLongitude() %></td>
+					            <td>
+						            <form method="POST" action="EditerVille">
+						            	<input type="hidden" name="codeINSEE" value="<%=villes.get(i).getCodeINSEE()%>">
+						            	<input type="submit" class="btn btn-primary" value="Editer">
+						            </form>
+					            </td>
 					        </tr>
 			        	<% }%>			       
 			        </tbody>
